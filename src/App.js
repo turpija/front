@@ -1,12 +1,14 @@
 import React from "react";
 import "./App.css";
 import { observable } from "mobx";
-import VehicleMakeList from "./components/VehicleMakeList";
+import VehicleList from "./components/VehicleList";
+import Search from "./components/Search";
 
 function App() {
   return (
     <div>
-      <VehicleMakeList />
+      <Search />
+      <VehicleList />
     </div>
   );
 }
