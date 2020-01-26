@@ -12,6 +12,34 @@ class VehicleList extends Component {
     //console.log(model);
   };
 
+  sortModels = () => {
+    //console.log(this.state.vehicleModels);
+
+    const vehicleModels = [...this.state.vehicleModels];
+
+    function dynamicSort(property) {
+      var sortOrder = 1;
+
+      if (property[0] === "-") {
+        sortOrder = -1;
+        property = property.substr(1);
+      }
+
+      return function(a, b) {
+        if (sortOrder == -1) {
+          return b[property].localeCompare(a[property]);
+        } else {
+          return a[property].localeCompare(b[property]);
+        }
+      };
+    }
+
+    //myArray.sort((a, b) => (a.Name.toLowerCase > b.Name.toLowerCase ? 1 : -1));
+    vehicleModels.sort(dynamicSort("Name"));
+    this.setState({ vehicleModels });
+    console.log(this.state.vehicleModels);
+  };
+
   renderModelCell(vehMake) {
     //render models with matching id for make
     const renderModels = this.state.vehicleModels.filter(
@@ -36,15 +64,18 @@ class VehicleList extends Component {
   }
 
   render() {
+    //this.sortModels();
     return (
       <div>
-        <table className="table">
+        <table className="table table-hover">
           <thead>
             <tr>
               {/* <th scope="col">Vehicle Make #</th> */}
               <th scope="col">Vehicle Make</th>
               {/* <th scope="col">Model #</th> */}
-              <th scope="col">Model</th>
+              <th onClick={() => this.sortModels()} scope="col">
+                Model <i className="fa fa-sort-desc"></i>
+              </th>
               <th></th>
             </tr>
           </thead>
