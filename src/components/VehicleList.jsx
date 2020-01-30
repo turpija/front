@@ -3,15 +3,23 @@ import { getVehicleMakes } from "../VehicleMakeDB";
 import { getVehicleModels } from "../VehicleModelDB";
 import dynamicSort from "../common/DynamicSort";
 import RenderRow from "./RenderRow";
+import Search from "./Search";
 
 class VehicleList extends Component {
   state = {
     vehicleMakes: getVehicleMakes(),
-    vehicleModels: getVehicleModels()
+    vehicleModels: getVehicleModels(),
+    vehicles: [], //tu bi trebalo biti sve ubačeno, složeno, za manipuliranje
+    searchQuery: ""
   };
 
   handleEdit = model => {
     //console.log(model);
+  };
+
+  handleSearch = query => {
+    this.setState({ searchQuery: query });
+    console.log("search for: " + this.state.searchQuery);
   };
 
   sortModels = () => {
@@ -27,6 +35,7 @@ class VehicleList extends Component {
     //this.sortModels();
     return (
       <div>
+        <Search value={this.state.searchQuery} onChange={this.handleSearch} />
         <table className="table table-hover">
           <thead>
             <tr>
@@ -47,10 +56,10 @@ class VehicleList extends Component {
           </thead>
           <tbody>
             <RenderRow
+              vehicles={this.state.vehicles}
               vehMakes={this.state.vehicleMakes}
               vehModels={this.state.vehicleModels}
             />
-            {/* {RenderRow(this.state.vehicleMakes, this.state.vehicleModels)} */}
           </tbody>
         </table>
       </div>

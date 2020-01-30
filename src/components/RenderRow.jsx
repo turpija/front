@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
 
-const RenderRow = ({ vehMakes, vehModels }) => {
+const RenderRow = ({ vehMakes, vehModels, vehicles }) => {
   //console.log(vehModels);
 
   const getMakeName = makeId => {
