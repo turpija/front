@@ -1,18 +1,18 @@
 const vehicleMakes = [
   {
-    Id: "mn5467v",
-    Name: "BMW",
-    Abrv: "bmw"
+    id: "mn5467v",
+    name: "BMW",
+    abrv: "bmw"
   },
   {
-    Id: "45k67jh5",
-    Name: "Ford",
-    Abrv: "ford"
+    id: "45k67jh5",
+    name: "Ford",
+    abrv: "ford"
   },
   {
-    Id: "32kj4hg6",
-    Name: "Volkswagen",
-    Abrv: "vw"
+    id: "32kj4hg6",
+    name: "Volkswagen",
+    abrv: "vw"
   }
 ];
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { getVehicleMakes } from "../VehicleMakeDB";
-import { getVehicleModels } from "../VehicleModelDB";
+import { getVehicleMakes } from "../common/data/VehicleMake";
+import { getVehicleModels } from "../common/data/VehicleModel";
 import dynamicSort from "../common/DynamicSort";
 import RenderRow from "./RenderRow";
 import Search from "./Search";

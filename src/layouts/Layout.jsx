@@ -7,10 +7,10 @@ import {
   NavLink
 } from "react-router-dom";
 import HomePage from "./../pages/home/HomePage";
-import ModelCreate from "./../pages/vehicle-makes/model/ModelCreate";
-import ModelEdit from "../pages/vehicle-makes/model/ModelEdit";
+import ModelCreate from "./../pages/vehicle-makes/ModelCreate";
+import ModelEdit from "../pages/vehicle-makes/ModelEdit";
 import MakeList from "../pages/vehicle-makes/MakeList";
-import ModelList from "./../pages/vehicle-makes/model/ModelList";
+import ModelList from "./../pages/vehicle-makes/ModelList";
 
 class Layout extends Component {
   render() {
