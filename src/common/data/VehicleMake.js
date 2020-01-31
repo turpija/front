@@ -1,4 +1,4 @@
-const makes = [
+const vehicleMakes = [
   {
     Id: "mn5467v",
     Name: "BMW",
