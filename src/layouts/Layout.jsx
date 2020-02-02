@@ -20,7 +20,7 @@ class Layout extends Component {
         <Router>
           <nav className="navbar-nav">
             <NavLink to="/home">Home</NavLink>
-            <NavLink to="/vehicle-makes">Vehicle Makes</NavLink>
+            <NavLink to="/vehicle-makes">Vehicle Makes List</NavLink>
             <NavLink to="/vehicle-models">Vehicle Models List</NavLink>
             <NavLink to="/vehicle-makes/model-create">- Model Create</NavLink>
             <NavLink to="/vehicle-makes/model-edit">- Model Edit</NavLink>

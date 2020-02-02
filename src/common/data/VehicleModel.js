@@ -19,7 +19,7 @@ const vehicleModels = [
   },
   {
     id: "4",
-    MakeId: "102",
+    makeId: "102",
     name: "taunus '78",
     abrv: "taunus"
   },
@@ -62,5 +62,5 @@ const vehicleModels = [
 ];
 
 export function getVehicleModels() {
-  return models;
+  return vehicleModels;
 }
