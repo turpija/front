@@ -1,8 +1,12 @@
 import React from "react";
-import { getVehicleMakes } from "./../../common/data/VehicleMake";
+import VehicleMakeService from "./../../common/data/VehicleMakeService";
 
 const MakeList = () => {
-  const vehicleMakes = getVehicleMakes();
+  const vehicles = new VehicleMakeService();
+
+  const allVehicles = vehicles.getAllData();
+  console.log("list call: ");
+  console.log(vehicles.find("F"));
 
   return (
     <React.Fragment>
@@ -16,7 +20,7 @@ const MakeList = () => {
           </tr>
         </thead>
         <tbody>
-          {vehicleMakes.map(model => (
+          {allVehicles.map(model => (
             <tr key={model.id}>
               <td>{model.id}</td>
               <td>{model.name}</td>
