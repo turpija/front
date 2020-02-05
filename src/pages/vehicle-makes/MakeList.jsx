@@ -4,9 +4,11 @@ import VehicleMakeService from "./../../common/data/VehicleMakeService";
 const MakeList = () => {
   const vehicles = new VehicleMakeService();
 
+  vehicles.put(2, "kurac", "palac");
+
   const allVehicles = vehicles.getAllData();
-  console.log("list call: ");
-  console.log(vehicles.find("F"));
+  console.log("all array: ");
+  console.log(allVehicles);
 
   return (
     <React.Fragment>
